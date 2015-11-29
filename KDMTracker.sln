@@ -1,0 +1,19 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "KDMTracker", "KDMTracker\KDMTracker.shproj", "{27F8F8A6-5653-4053-8B60-A82612651EB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KDMTracker.Droid", "Droid\KDMTracker.Droid.csproj", "{75287D1D-8634-43DF-AA21-59F346857DCF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{75287D1D-8634-43DF-AA21-59F346857DCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75287D1D-8634-43DF-AA21-59F346857DCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75287D1D-8634-43DF-AA21-59F346857DCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75287D1D-8634-43DF-AA21-59F346857DCF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

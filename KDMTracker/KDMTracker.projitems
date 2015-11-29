@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{27F8F8A6-5653-4053-8B60-A82612651EB9}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>KDMTracker</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)KDMTracker.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Fields\HitLocation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Fields\ModifiableStat.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Fields\ProgressChain.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CharacterSheet.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Constants.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Fields\" />
+  </ItemGroup>
+</Project>
