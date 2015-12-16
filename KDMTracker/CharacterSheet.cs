@@ -4,16 +4,16 @@ namespace KDMTracker
 {
 	public class CharacterSheet
 	{
-		string Name;
-		bool IsMale;
+		string Name = "";
+		bool IsMale = false;
 
-		uint Survival;
-		bool CanDodge;
-		bool CanEncourage;
-		bool CanSurge;
-		bool CanDash;
+		uint Survival = 0;
+		bool CanDodge = true;
+		bool CanEncourage = false;
+		bool CanSurge = false;
+		bool CanDash = false;
 
-		uint Movement;
+		uint Movement = 5;
 		ModifiableStat Accuracy;
 		ModifiableStat Strength;
 		ModifiableStat Evasion;
@@ -29,24 +29,44 @@ namespace KDMTracker
 
 		ProgressChain HuntXP;
 
-		WeaponType ProficiencyChoice;
+		WeaponType? ProficiencyChoice = null;
 		ProgressChain WeaponProficiencyLevel;
 
 		ProgressChain Courage;
 
 		ProgressChain Understanding;
 
-		Array<FightingArt> FightingArts;
-		bool CanUseFightingArts;
+		FightingArt[] FightingArts = null;
+		bool CanUseFightingArts = true;
 
-		Array<Disorder> Disorders;
+		Disorder[] Disorders = null;
 
-		bool SkipNextHunt;
-		Array<AbilityAndImpariment> AbilitiesAndImpairments;
+		bool SkipNextHunt = false;
+		AbilityAndImpariment[] AbilitiesAndImpairments = null;
 
 
-		public CharacterSheet ()
+		public CharacterSheet()
 		{
+			Accuracy = new ModifiableStat ("Accuracy");
+			Strength = new ModifiableStat ("Strength");
+			Evasion = new ModifiableStat ("Evasion");
+			Luck = new ModifiableStat ("Luck");
+			Speed = new ModifiableStat ("Speed");
+
+			Brain = new HitLocation ("Brain", false);
+			Head = new HitLocation ("Head", false);
+			Arms = new HitLocation ("Arms", true);
+			Body = new HitLocation ("Body", true);
+			Waist = new HitLocation ("Waist", true);
+			Legs = new HitLocation ("Legs", true);
+
+			HuntXP = new ProgressChain (new uint[]{2,6,10,15,16},16);
+
+			WeaponProficiencyLevel = new ProgressChain (new uint[]{ 3, 8 }, 8);
+
+			Courage = new ProgressChain (new uint[]{ 3, 9 }, 9);
+
+			Understanding = new ProgressChain (new uint[]{ 3, 9 }, 9);
 		}
 	}
 }

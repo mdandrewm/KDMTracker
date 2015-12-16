@@ -15,6 +15,13 @@ namespace KDMTracker
 			LocationName = locationName;
 			HasLightInjury = hasLightInjury;
 		}
+
+		public void ReduceArmor()
+		{
+			if (Armor > 0) {
+				Armor--;
+			}
+		}
 	}
 }
 

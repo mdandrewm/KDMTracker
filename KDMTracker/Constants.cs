@@ -19,7 +19,7 @@ namespace KDMTracker
 		Seizures
 	}
 
-	public enum AbilityAndImpairment
+	public enum AbilityAndImpariment
 	{
 		BrokenBack
 	}
